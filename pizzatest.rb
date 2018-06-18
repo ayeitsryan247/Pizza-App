@@ -68,6 +68,7 @@ psize = ["small","medium","large"]
 	puts "Please Select your pizza size"
 	puts""
 	puts"
+                  SIZE
 	|=======|  |========|  |=======|
 	|1.Small|  |2.Medium|  |3.Large|
 	|=======|  |========|  |=======|
@@ -92,6 +93,8 @@ psize = ["small","medium","large"]
 	puts "Would you like any of these "
 	puts""
 	puts"
+
+	            TOPPINGS
 	|=======|  |========|  |===========|
 	|1.Bacon|  |2.Cheese|  |3.Pepperoni|
 	|=======|  |========|  |===========|
