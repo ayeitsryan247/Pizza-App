@@ -100,7 +100,8 @@ psize = ["small","medium","large"]
 
 	response = gets.chomp
 	
-topprice = 0.00	
+topprice = 0.00
+
 case response.downcase
 when "1"
 	topprice + topprice = 0.99
@@ -117,6 +118,42 @@ when "3"
 else
 	puts "Sorry we cant give you extra of that item!"
 end
+
+
+	puts "Would you like any of these "
+	puts""
+	puts"
+ 
+        
+                    WINGS           
+	===============================
+	|==========|  |======|  |=====|
+	|1.Original|  |2.Mild|  |3.Hot|
+	|==========|  |======|  |=====|
+	  +$4.25       +$4.50    $4.50
+	" .cyan
+
+	response = gets.chomp
+	
+wingprice = 0.00
+	
+case response.downcase
+when "1"
+	wingprice + wingprice = 0.99
+	puts "Added Original Wings".yellow
+	puts""
+when "2"
+	wingprice + wingprice = 0.75
+	puts "Added Mild Wings".orange
+	puts""
+when "3"
+	wingprice + wingprice = 0.75
+	puts "Added Hot Wings".red
+	puts""
+else
+	puts "Sorry we cant do that."
+end
+
 
 puts "Would you like your order to be delivered? "
 	puts""
@@ -144,6 +181,9 @@ else
 	puts "Please contact us there was an issue"
 end
 
-total_p = pizzaprice + topprice + Delivprice
 
-puts "Your total price is $#{total_p}0"
+
+
+total_p = pizzaprice + topprice + Delivprice + wingprice
+
+puts "Your total price is $#{total_p}"
