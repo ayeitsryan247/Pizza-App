@@ -68,9 +68,9 @@ psize = ["small","medium","large"]
 	puts "Please Select your pizza size"
 	puts""
 	puts"
-	|-------|  |--------|  |-------|
+	|=======|  |========|  |=======|
 	|1.Small|  |2.Medium|  |3.Large|
-	|-------|  |--------|  |-------|
+	|=======|  |========|  |=======|
 	  $10         $15        $20
 	".cyan
 	response = gets.chomp
@@ -92,9 +92,9 @@ psize = ["small","medium","large"]
 	puts "Would you like any of these "
 	puts""
 	puts"
-	|-------|  |--------|  |-----------|
+	|=======|  |========|  |===========|
 	|1.Bacon|  |2.Cheese|  |3.Pepperoni|
-	|-------|  |--------|  |-----------|
+	|=======|  |========|  |===========|
 	  +$0.99     +$0.75       +$0.75
 	" .cyan
 
@@ -122,9 +122,9 @@ puts "Would you like your order to be delivered? "
 	puts""
 	puts"
 
-	|----------|  |---------| 
+	|==========|  |=========| 
 	|Y-Delivery|  |N-Pick-Up|
-	|----------|  |---------|  
+	|==========|  |=========|  
 	  +$5.00        +$0.00     
 	".cyan
 
