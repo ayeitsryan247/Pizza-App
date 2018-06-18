@@ -191,27 +191,32 @@ puts "Would you like your order to be delivered? "
 	puts""
 	puts"
 
-	|==========|  |=========| 
-	|Y-Delivery|  |N-Pick-Up|
-	|==========|  |=========|  
-	  +$5.00        +$0.00     
+	|=========================| |========================| |=========|
+	|1-Delivery Under 50 Miles| |2.Delivery over 50 miles| |3-Pick-Up|
+	|=========================| |========================| |=========|
+	        +$5.00                     +$15.00                +$0.00     
 	".cyan
 
 	response = gets.chomp
 	
 Delivprice = 0.00	
 case response.downcase
-when "n"
-	Delivprice + Delivprice = 0.00
-	puts "You make pickup your order at our retail location"
+when "1"
+	Delivprice + Delivprice = 5.00
+	puts "You live under 50 miles to us. Your delivery will arrive soon."
 	puts""
-when "y"
-	topprice + topprice = 5.00
-	puts "Your order will be delivered to you."
+when "2"
+	topprice + topprice = 15.00
+	puts "Your order will be delivered to you it will take a little longer."
+	puts""
+when "3"
+	topprice + topprice = 0.00
+	puts "You can pickup your order at our retail location."
 	puts""
 else
 	puts "Please contact us there was an issue"
 end
+
 
 
 
