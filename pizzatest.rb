@@ -140,20 +140,52 @@ wingprice = 0.00
 case response.downcase
 when "1"
 	wingprice + wingprice = 0.99
-	puts "Added Original Wings".yellow
+	puts "Added Original Wings"
 	puts""
 when "2"
 	wingprice + wingprice = 0.75
-	puts "Added Mild Wings".orange
+	puts "Added Mild Wings"
 	puts""
 when "3"
 	wingprice + wingprice = 0.75
-	puts "Added Hot Wings".red
+	puts "Added Hot Wings"
 	puts""
 else
 	puts "Sorry we cant do that."
 end
 
+	puts "Would you like any of these drinks? "
+	puts""
+	puts"
+ 
+        
+                    Drinks           
+	=================================
+	|=======|  |=======|  |=========|
+	|1.Water|  |2.Pepsi|  |3.Mtn Dew|
+	|=======|  |=======|  |=========|
+	 +$1.25     +$3.00       $3.00
+	" .cyan
+
+	response = gets.chomp
+	
+drinkprice = 0.00
+	
+case response.downcase
+when "1"
+	drinkprice + drinkprice = 1.25
+	puts "Added Drinking Water"
+	puts""
+when "2"
+	drinkprice + drinkprice = 3.00
+	puts "Added Pepsi"
+when "3"
+	drinkprice + drinkprice = 3.00
+	puts "Added Mtn Dew"
+	puts""
+else
+	puts "Sorry we cant do that."
+end
 
 puts "Would you like your order to be delivered? "
 	puts""
@@ -184,6 +216,6 @@ end
 
 
 
-total_p = pizzaprice + topprice + Delivprice + wingprice
+total_p = pizzaprice + topprice + Delivprice + wingprice + drinkprice
 
 puts "Your total price is $#{total_p}"
