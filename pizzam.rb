@@ -29,12 +29,11 @@ end
 
 #Crust Start
 def crust()
-	crust = ['thin', 'pan']
+	crust = ['thin', 'pan','Thick']
 	puts "Crust: #{crust.sample}"
 end
 #Crust End
 
-#meats & Veg start
 def meat()
 	m1 = ['none', 'bacon', 'ham', 'pepperoni', 'sausage']
 	puts "Meat Toppings: #{m1.sample}"
@@ -63,26 +62,31 @@ end
 pizzaprice = 0.00
 
 
-psize = ["small","medium","large"]
+psize = ["small","medium","large" ,"superjumbo"]
 
 	puts "Please Select your pizza size"
 	puts""
 	puts"
-	|-------|  |--------|  |-------|
-	|1.Small|  |2.Medium|  |3.Large|
-	|-------|  |--------|  |-------|
-	  $10         $15        $20
-	".cyan
+
+	 10 inch     12 inch    16 inch     20 inch
+	|-------|  |--------|  |-------| |-----------|
+	|1.Small|  |2.Medium|  |3.Large| |Super Jumbo|
+	|-------|  |--------|  |-------| |-----------|
+	  $7.70      $9.00      $10.25       $12.99
+	" .red
 	response = gets.chomp
 	
 	if response == "1"
-		sprice = 10.00
+		sprice = 7.70
 		pizzaprice = pizzaprice + sprice
 	elsif response == "2"
-		sprice = 15.00
+		sprice = 9.00
 		pizzaprice = pizzaprice + sprice
 	elsif response == "3"
-		sprice = 20.00
+		sprice = 10.25
+		pizzaprice = pizzaprice + sprice
+	elsif response == "3"
+		sprice = 12.99
 		pizzaprice = pizzaprice + sprice
 	else
 		sprice = 0.00
@@ -92,11 +96,17 @@ psize = ["small","medium","large"]
 	puts "Would you like any of these "
 	puts""
 	puts"
-	|-------|  |--------|  |-----------|
-	|1.Bacon|  |2.Cheese|  |3.Pepperoni|
-	|-------|  |--------|  |-----------|
-	  +$0.99     +$0.75       +$0.75
-	" .cyan
+    
+    |========================================================|
+	|              POPULAR TOPPINGS                          |
+	|========================================================|               
+	|-------|  |--------|  |-----------| |-----------------| | 
+	|1.Bacon|  |2.Cheese|  |3.Pepperoni| |4.Italian sausage| | 
+	|-------|  |--------|  |-----------| |-----------------| | 
+	| +$0.99     +$0.75       +$0.75           +$0.75        |
+    |========================================================|
+
+	" .red
 
 	response = gets.chomp
 	
@@ -104,7 +114,7 @@ topprice = 0.00
 case response.downcase
 when "1"
 	topprice + topprice = 0.99
-	puts "Added bacon"
+	puts "Added extra bacon"
 	puts""
 when "2"
 	topprice + topprice = 0.75
@@ -113,6 +123,18 @@ when "2"
 when "3"
 	topprice + topprice = 0.75
 	puts "Added extra Pepperoni"
+	puts""
+when "4"
+	topprice + topprice = 0.75
+	puts "Added extra Italian Sausage"
+	puts""
+when "5"
+	topprice + topprice = 0.75
+	puts "Added extra Hamburger"
+	puts""
+when "6"
+	topprice + topprice = 0.75
+	puts "Added extra Chicken"
 	puts""
 else
 	puts "Sorry we cant give you extra of that item!"
@@ -126,7 +148,7 @@ puts "Would you like your order to be delivered? "
 	|Y-Delivery|  |N-Pick-Up|
 	|----------|  |---------|  
 	  +$5.00        +$0.00     
-	".cyan
+	" .red
 
 	response = gets.chomp
 	
