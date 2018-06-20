@@ -5,26 +5,27 @@ require 'money'
 puts "Welcome to".red
 puts "
 ------------------------------------------------------------------------------------------------------
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 ------------------------------------------------------------------------------------------------------
-|-|#     #                                                           ######                        |-|
-|-|#     #  ####  #      #      #   # #    #  ####   ####  #####     #     # # ###### ######   ##  |-|
-|-|#     # #    # #      #       # #  #    # #    # #    # #    #    #     # #     #      #   #  # |-|
-|-|####### #    # #      #        #   #    # #    # #    # #    #    ######  #    #      #   #    #|-|
-|-|#     # #    # #      #        #   # ## # #    # #    # #    #    #       #   #      #    ######|-|
-|-|#     # #    # #      #        #   ##  ## #    # #    # #    #    #       #  #      #     #    #|-|
-|-|#     #  ####  ###### ######   #   #    #  ####   ####  #####     #       # ###### ###### #    #|-|
+|-|■     ■                                                           ■■■■■■                        |-|
+|-|■     ■  ■■■■  ■      ■      ■   ■ ■    ■  ■■■■   ■■■■  ■■■■■     ■     ■ ■ ■■■■■■ ■■■■■■   ■■  |-|
+|-|■     ■ ■    ■ ■      ■       ■ ■  ■    ■ ■    ■ ■    ■ ■    ■    ■     ■ ■     ■      ■   ■  ■ |-|
+|-|■■■■■■■ ■    ■ ■      ■        ■   ■    ■ ■    ■ ■    ■ ■    ■    ■■■■■■  ■    ■      ■   ■    ■|-|
+|-|■     ■ ■    ■ ■      ■        ■   ■ ■■ ■ ■    ■ ■    ■ ■    ■    ■       ■   ■      ■    ■■■■■■|-|
+|-|■     ■ ■    ■ ■      ■        ■   ■■  ■■ ■    ■ ■    ■ ■    ■    ■       ■  ■      ■     ■    ■|-|
+|-|■     ■  ■■■■  ■■■■■■ ■■■■■■   ■   ■    ■  ■■■■   ■■■■  ■■■■■     ■       ■ ■■■■■■ ■■■■■■ ■    ■|-|
 ------------------------------------------------------------------------------------------------------
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-------------------------------------------------------------------------------------------------------".cyan
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+------------------------------------------------------------------------------------------------------
+".cyan
 puts "How many pizzas would you like to order?".red
 #Opeinging Text (the first line the user will see)
 
 #Random Pizza Start
-def rpizza()
-	puts "Here is a random pizza!"
-	puts "#{crust}#{meat}#{meat2}#{veg}"
-end
+#def rpizza()
+#	puts "Here is a random pizza!"
+#	puts "#{crust}#{meat}#{meat2}#{veg}"
+#end
 #Random Pizza End
 
 #Crust Start
@@ -52,14 +53,6 @@ end
 
 
 response = gets.chomp.to_i
-
-
-while response > 0 do 
-	rpizza() 
-	response -= 1
-end
-	
-
 pizzaprice = 0.00
 
 
@@ -68,37 +61,43 @@ psize = ["small","medium","large"]
 	puts "Please Select your pizza size"
 	puts""
 	puts"
-                  SIZE
-	|=======|  |========|  |=======|
+	■■■■■■■■■  ■■■■■■■■■■  ■■■■■■■■■   
 	|1.Small|  |2.Medium|  |3.Large|
-	|=======|  |========|  |=======|
+	■■■■■■■■■  ■■■■■■■■■■  ■■■■■■■■■
 	  $10         $15        $20
+
 	".cyan
 	response = gets.chomp
 	
 	if response == "1"
 		sprice = 10.00
+		puts "Small Pizza Size added your current order price is : $#{sprice}"
 		pizzaprice = pizzaprice + sprice
 	elsif response == "2"
 		sprice = 15.00
+		puts "Medium Pizza Size added your current order price is : $#{sprice}"
 		pizzaprice = pizzaprice + sprice
 	elsif response == "3"
 		sprice = 20.00
+		puts "Large Pizza Size added your current order price is : $#{sprice}"
 		pizzaprice = pizzaprice + sprice
 	else
 		sprice = 0.00
+		puts "No added your current order price is : $#{sprice}"
+		exit
 	end
 
 
-	puts "Would you like any of these "
+	puts "Would you like any toppings "
 	puts""
 	puts"
 
-	            TOPPINGS
-	|=======|  |========|  |===========|
+	           
+	■■■■■■■■■  ■■■■■■■■■■  ■■■■■■■■■■■■■
 	|1.Bacon|  |2.Cheese|  |3.Pepperoni|
-	|=======|  |========|  |===========|
+	■■■■■■■■■  ■■■■■■■■■■  ■■■■■■■■■■■■■
 	  +$0.99     +$0.75       +$0.75
+
 	" .cyan
 
 	response = gets.chomp
@@ -128,12 +127,12 @@ end
 	puts"
  
         
-                    WINGS           
-	===============================
-	|==========|  |======|  |=====|
-	|1.Original|  |2.Mild|  |3.Hot|
-	|==========|  |======|  |=====|
-	  +$4.25       +$4.50    $4.50
+                    
+
+	  ■■■■■■■■■■■■  ■■■■■■■■  ■■■■■■■
+	  |1.Original|  |2.Mild|  |3.Hot|
+	  ■■■■■■■■■■■■  ■■■■■■■■  ■■■■■■■
+	    +$4.25       +$4.50    $4.50
 	" .cyan
 
 	response = gets.chomp
@@ -157,17 +156,16 @@ else
 	puts "Sorry we cant do that."
 end
 
-	puts "Would you like any of these drinks? "
+	puts "Would you like any  drinks? "
 	puts""
 	puts"
  
         
-                    Drinks           
-	=================================
-	|=======|  |=======|  |=========|
-	|1.Water|  |2.Pepsi|  |3.Mtn Dew|
-	|=======|  |=======|  |=========|
-	 +$1.25     +$3.00       $3.00
+                              
+	 ■■■■■■■■■  ■■■■■■■■■  ■■■■■■■■■■■ ■■■■■■
+	 |1.Water|  |2.Pepsi|  |3.Mtn Dew| |4.No|
+	 ■■■■■■■■■  ■■■■■■■■■  ■■■■■■■■■■■ ■■■■■■
+	  +$1.25     +$3.00       $3.00     $0.00
 	" .cyan
 
 	response = gets.chomp
@@ -184,7 +182,11 @@ when "2"
 	puts "Added Pepsi"
 when "3"
 	drinkprice + drinkprice = 3.00
-	puts "Added Mtn Dew"
+	puts "Added Mtn Dew "
+	puts""
+when "4"
+	drinkprice + drinkprice = 0.00
+	puts "No Drinks Added"
 	puts""
 else
 	puts "Sorry we cant do that."
@@ -194,9 +196,9 @@ puts "Would you like your order to be delivered? "
 	puts""
 	puts"
 
-	|=========================| |========================| |=========|
+	■■■■■■■■■■■■■■■■■■■■■■■■■■■ ■■■■■■■■■■■■■■■■■■■■■■■■■■ ■■■■■■■■■■■
 	|1-Delivery Under 50 Miles| |2.Delivery over 50 miles| |3-Pick-Up|
-	|=========================| |========================| |=========|
+	■■■■■■■■■■■■■■■■■■■■■■■■■■■ ■■■■■■■■■■■■■■■■■■■■■■■■■■ ■■■■■■■■■■■
 	        +$5.00                     +$15.00                +$0.00     
 	".cyan
 
@@ -222,8 +224,7 @@ end
 
 
 
-
-
 total_p = pizzaprice + topprice + Delivprice + wingprice + drinkprice
+total_p *= 1.06
 
-puts "Your total price is $#{total_p}"
+puts "Your total price is $#{total_p.round(2)}"
