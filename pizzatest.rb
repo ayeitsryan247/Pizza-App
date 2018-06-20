@@ -58,7 +58,7 @@ pizzaprice = 0.00
 
 psize = ["small","medium","large"]
 
-	puts "Please Select your pizza size"
+	puts "Please Select your pizza Size"
 	puts""
 	puts"
 	■■■■■■■■■  ■■■■■■■■■■  ■■■■■■■■■   
@@ -83,12 +83,12 @@ psize = ["small","medium","large"]
 		pizzaprice = pizzaprice + sprice
 	else
 		sprice = 0.00
-		puts "No added your current order price is : $#{sprice}"
+		puts "Invalid selection you will NOT be charged"
 		exit
 	end
 
 
-	puts "Would you like any toppings "
+	puts "Would you like any Toppings "
 	puts""
 	puts"
 
@@ -107,22 +107,22 @@ topprice = 0.00
 case response.downcase
 when "1"
 	topprice + topprice = 0.99
-	puts "Added bacon"
+	puts "Bacon added your current order price is : $#{sprice + topprice}"
 	puts""
 when "2"
 	topprice + topprice = 0.75
-	puts "Added extra cheese"
+	puts "Cheese added your current order price is : $#{sprice + topprice}"
 	puts""
 when "3"
 	topprice + topprice = 0.75
-	puts "Added extra Pepperoni"
+	puts "Pepperoni added your current order price is : $#{sprice + topprice}"
 	puts""
 else
 	puts "Sorry we cant give you extra of that item!"
 end
 
 
-	puts "Would you like any of these "
+	puts "Would you like any Wings? "
 	puts""
 	puts"
  
@@ -132,7 +132,7 @@ end
 	  ■■■■■■■■■■■■  ■■■■■■■■  ■■■■■■■
 	  |1.Original|  |2.Mild|  |3.Hot|
 	  ■■■■■■■■■■■■  ■■■■■■■■  ■■■■■■■
-	    +$4.25       +$4.50    $4.50
+	    +$4.25       +$4.25    $4.25
 	" .cyan
 
 	response = gets.chomp
@@ -141,16 +141,16 @@ wingprice = 0.00
 	
 case response.downcase
 when "1"
-	wingprice + wingprice = 0.99
-	puts "Added Original Wings"
+	wingprice + wingprice = 4.25
+	puts "Original wings added your current order price is : $#{sprice + topprice + wingprice.round(2)}"
 	puts""
 when "2"
-	wingprice + wingprice = 0.75
-	puts "Added Mild Wings"
+	wingprice + wingprice = 4.25
+	puts "Mild wings added your current order price is : $#{sprice + topprice + wingprice.round(2)}"
 	puts""
 when "3"
-	wingprice + wingprice = 0.75
-	puts "Added Hot Wings"
+	wingprice + wingprice = 4.25
+	puts "Hot wings added your current order price is : $#{sprice + topprice + wingprice.round(2)}"
 	puts""
 else
 	puts "Sorry we cant do that."
@@ -165,7 +165,7 @@ end
 	 ■■■■■■■■■  ■■■■■■■■■  ■■■■■■■■■■■ ■■■■■■
 	 |1.Water|  |2.Pepsi|  |3.Mtn Dew| |4.No|
 	 ■■■■■■■■■  ■■■■■■■■■  ■■■■■■■■■■■ ■■■■■■
-	  +$1.25     +$3.00       $3.00     $0.00
+	  +$1.25     +$1.25      $1.25     $0.00
 	" .cyan
 
 	response = gets.chomp
@@ -175,18 +175,18 @@ drinkprice = 0.00
 case response.downcase
 when "1"
 	drinkprice + drinkprice = 1.25
-	puts "Added Drinking Water"
+	puts "Water added your current order price is : $#{sprice + topprice + wingprice + drinkprice.round(2)}"
 	puts""
 when "2"
-	drinkprice + drinkprice = 3.00
-	puts "Added Pepsi"
+	drinkprice + drinkprice = 1.25
+	puts "Pepsi added your current order price is : $#{sprice + topprice + wingprice + drinkprice.round(2)}"
 when "3"
-	drinkprice + drinkprice = 3.00
-	puts "Added Mtn Dew "
+	drinkprice + drinkprice = 1.25
+	puts "Mtn Dew added your current order price is : $#{sprice + topprice + wingprice + drinkprice}"
 	puts""
 when "4"
 	drinkprice + drinkprice = 0.00
-	puts "No Drinks Added"
+	puts "No drinks added your current order price is : $#{sprice + topprice + wingprice + drinkprice}"
 	puts""
 else
 	puts "Sorry we cant do that."
@@ -208,15 +208,15 @@ Delivprice = 0.00
 case response.downcase
 when "1"
 	Delivprice + Delivprice = 5.00
-	puts "You live under 50 miles to us. Your delivery will arrive soon."
+	puts "Under 50 miles added your current order price is : $#{sprice + topprice + wingprice + drinkprice + Delivprice}"
 	puts""
 when "2"
 	topprice + topprice = 15.00
-	puts "Your order will be delivered to you it will take a little longer."
+	puts "Over 50 miles added your current order price is : $#{sprice + topprice + wingprice + drinkprice + Delivprice}"
 	puts""
 when "3"
 	topprice + topprice = 0.00
-	puts "You can pickup your order at our retail location."
+	puts "Pick-Up added your current order price is : $#{sprice + topprice + wingprice + drinkprice + Delivprice}"
 	puts""
 else
 	puts "Please contact us there was an issue"
